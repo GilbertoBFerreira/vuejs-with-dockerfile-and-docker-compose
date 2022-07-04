@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  web-ui:
+    container_name: "web-ui" 
+    image: ${DOCKER_REGISTRY-}tester-image:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:80
